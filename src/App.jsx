@@ -1,12 +1,41 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
+import Body from './components/Body'
+import Head from './components/Head'
+import MainContainer from './components/MainContainer'
+import WatchPage from './components/WatchPage'
+import { Provider } from 'react-redux'
+import appStore from './utils/appStore'
 
 function App() {
 
+  const appRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <Body/>,
+    children: [
+
+      {
+        path: "/",
+        element: <MainContainer/>,
+      },
+
+      {
+
+        path: "/watch",
+        element: <WatchPage/>
+      },
+    ]
+  },
+  ])
 
   return (
-   <div>
-    <h1 className='font-bold text-4xl bg-red-700'>Youtube Project</h1>
-   </div>
+    <>
+    <Provider store={appStore}>
+   <Head/>
+   <RouterProvider router={appRouter}></RouterProvider>
+   </Provider>
+   </>
   )
 }
 
