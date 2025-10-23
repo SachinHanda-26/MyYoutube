@@ -7,7 +7,7 @@ const SideBar = () => {
     const showMenu = useSelector(store => store.hamstore.isMenuToggle);
 
   return showMenu && (
-    <div className='bg-gray-100 h-screen w-50'>
+    <div className='bg-gray-100 w-52'>
       
       <h1 className='font-bold text-lg p-2'>Subscriptions</h1>
       <ul>

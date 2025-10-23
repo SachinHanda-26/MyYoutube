@@ -10,11 +10,14 @@ const SideSlice = createSlice({
     reducers:{
         MenuToggle: (state) => {
             state.isMenuToggle = !state.isMenuToggle;
+        },
+        closeMenu: (state)=>{
+            state.isMenuToggle = false;
         }
     },
 })
 
-export const {MenuToggle} = SideSlice.actions;
+export const {MenuToggle, closeMenu} = SideSlice.actions;
 
 
 export default SideSlice.reducer;

@@ -22,7 +22,7 @@ function App() {
 
       {
 
-        path: "/watch",
+        path: "watch",
         element: <WatchPage/>
       },
     ]
