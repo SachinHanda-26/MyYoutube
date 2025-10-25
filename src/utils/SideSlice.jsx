@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const SideSlice = createSlice({
 
-    name: 'hamstore',
+    name: "hamstore",
     initialState: {
         isMenuToggle: true,
     },

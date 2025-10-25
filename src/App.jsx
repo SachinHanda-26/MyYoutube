@@ -33,6 +33,11 @@ function App() {
     <>
     <Provider store={appStore}>
    <Head/>
+
+  <div className='pt-16'>
+    
+  </div>
+
    <RouterProvider router={appRouter}></RouterProvider>
    </Provider>
    </>
