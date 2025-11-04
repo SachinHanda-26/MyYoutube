@@ -9,6 +9,7 @@ const searchSlice = createSlice({
         cacheResults: (state, action)=>{
             state = Object.assign(state, action.payload);
         },
+
     },
 });
 
